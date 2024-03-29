@@ -1,8 +1,6 @@
 'use client'
 
 import React from 'react';
-import Image from 'next/image';
-import type {NextPage} from 'next';
 import {
     useAccount,
     useReadContract,
@@ -61,7 +59,7 @@ export const Mint = () => {
 
     React.useEffect(() => {
         if (totalSupplyData) {
-            setTotalMinted(totalSupplyData);
+            setTotalMinted(Number(totalSupplyData));
         }
     }, [totalSupplyData]);
 
