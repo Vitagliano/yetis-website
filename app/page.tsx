@@ -1,113 +1,120 @@
 import Image from "next/image";
+import {Mint} from "@/components/mint";
+import React from "react";
 
 export default function Home() {
-  return (
-    <main className="flex min-h-screen flex-col items-center justify-between p-24">
-      <div className="z-10 max-w-5xl w-full items-center justify-between font-mono text-sm lg:flex">
-        <p className="fixed left-0 top-0 flex w-full justify-center border-b border-gray-300 bg-gradient-to-b from-zinc-200 pb-6 pt-8 backdrop-blur-2xl dark:border-neutral-800 dark:bg-zinc-800/30 dark:from-inherit lg:static lg:w-auto  lg:rounded-xl lg:border lg:bg-gray-200 lg:p-4 lg:dark:bg-zinc-800/30">
-          Get started by editing&nbsp;
-          <code className="font-mono font-bold">app/page.tsx</code>
-        </p>
-        <div className="fixed bottom-0 left-0 flex h-48 w-full items-end justify-center bg-gradient-to-t from-white via-white dark:from-black dark:via-black lg:static lg:h-auto lg:w-auto lg:bg-none">
-          <a
-            className="pointer-events-none flex place-items-center gap-2 p-8 lg:pointer-events-auto lg:p-0"
-            href="https://vercel.com?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            By{" "}
-            <Image
-              src="/vercel.svg"
-              alt="Vercel Logo"
-              className="dark:invert"
-              width={100}
-              height={24}
-              priority
-            />
-          </a>
-        </div>
-      </div>
+    return (
+        <main className="flex min-h-screen flex-col items-center w-full relative">
+            <div className="bg-gobblerz-pattern absolute inset-0 -z-1"/>
 
-      <div className="relative flex place-items-center before:absolute before:h-[300px] before:w-full sm:before:w-[480px] before:-translate-x-1/2 before:rounded-full before:bg-gradient-radial before:from-white before:to-transparent before:blur-2xl before:content-[''] after:absolute after:-z-20 after:h-[180px] after:w-full sm:after:w-[240px] after:translate-x-1/3 after:bg-gradient-conic after:from-sky-200 after:via-blue-200 after:blur-2xl after:content-[''] before:dark:bg-gradient-to-br before:dark:from-transparent before:dark:to-blue-700 before:dark:opacity-10 after:dark:from-sky-900 after:dark:via-[#0141ff] after:dark:opacity-40 before:lg:h-[360px] z-[-1]">
-        <Image
-          className="relative dark:drop-shadow-[0_0_0.3rem_#ffffff70] dark:invert"
-          src="/next.svg"
-          alt="Next.js Logo"
-          width={180}
-          height={37}
-          priority
-        />
-      </div>
 
-      <div className="mb-32 grid text-center lg:max-w-5xl lg:w-full lg:mb-0 lg:grid-cols-4 lg:text-left">
-        <a
-          href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={`mb-3 text-2xl font-semibold`}>
-            Docs{" "}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className={`m-0 max-w-[30ch] text-sm opacity-50`}>
-            Find in-depth information about Next.js features and API.
-          </p>
-        </a>
+            <div className="flex items-center justify-center w-full max-w-6xl min-h-[100vh] relative">
+                <div className="absolute top-0 left-0 w-full h-full opacity-[0.1] z-[-1]"
+                ></div>
+                <div className="flex w-[1300px] min-h-[100vh]">
+                    <div
+                        className="flex flex-col px-[30px] xl:px-0 xl:flex-row w-full items-center xl:items-start xl:items-between gap-[30px] xl:gap-[150px] mt-[20px] xl:mt-[100px] mb-[50px]">
+                        <div className="flex flex-col grow"><span
+                            className="text-[42px] text-[#fff] font-[700]">GOBBLERZ</span>
+                            <div className="flex gap-[10px] mt-[12px]">
+                                <div
+                                    className="px-[16px] py-[8px] text-[#fff] rounded-[4px] bg-[rgba(22,22,22,1)] border-white/30 border-2 "
+                                ><span
+                                    className="text-[rgba(255,255,255,0.5)] font-[600]">Supply:</span> <span>2222</span>
+                                </div>
+                            </div>
+                            <div className="flex flex-col mt-[45px] gap-[12px]"><span
+                                className="text-[22px] text-[#fff] font-[700]">About GOBBLERZ Collection</span><span
+                                className="text-[rgba(255,255,255,0.5)] text-[16px]">The Gobblerz collection resembles an exquisite art gallery showcasing the talent of over 30 accomplished artists on the Avalanche platform. Discover your favorite artists among our collaborative works, featuring a stunning array of unique 1/1 creations!</span>
+                            </div>
+                            <div className="flex flex-col mt-[45px] gap-[12px]"><span
+                                className="text-[22px] text-[#fff] font-[700]">Mint Phases</span>
+                                <div className="flex flex-col w-full gap-[24px]">
+                                    <div
+                                        className="px-[16px] py-[8px] text-[#fff] rounded-[4px] bg-[rgba(22,22,22,1)] border-white/30 border-2 ">
+                                        <div className="flex flex-col gap-[8px] relative">
+                                            <div className="flex"><span
+                                                className="w-[110px] text-[16px] text-[rgba(255,255,255,0.5)]">Phase:</span><span
+                                                className="text-[16px] text-[#fff] font-[700]">OG</span></div>
+                                            <div className="flex"><span
+                                                className="w-[110px] text-[rgba(255,255,255,0.5)]">Date:</span><span
+                                                className="text-[16px] text-[#fff] font-[700]"><time
+                                                dateTime="1707148800000">2024/02/05 13:00:00</time></span></div>
 
-        <a
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={`mb-3 text-2xl font-semibold`}>
-            Learn{" "}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className={`m-0 max-w-[30ch] text-sm opacity-50`}>
-            Learn about Next.js in an interactive course with&nbsp;quizzes!
-          </p>
-        </a>
 
-        <a
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={`mb-3 text-2xl font-semibold`}>
-            Templates{" "}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className={`m-0 max-w-[30ch] text-sm opacity-50`}>
-            Explore starter templates for Next.js.
-          </p>
-        </a>
+                                            <div
+                                                className="absolute top-[-8px] right-[-16px] px-[16px] py-[4px] text-[13px] border-end"
+                                            >
+                                                <span className="text-[#fff]">Ended</span></div>
+                                        </div>
+                                    </div>
+                                    <div className="border-white/30 border-2 p-[16px] py-[8px] text-[#fff] rounded-[4px] bg-[rgba(22,22,22,1)]"
+                                    >
+                                        <div className="flex flex-col gap-[8px] relative">
+                                            <div className="flex"><span
+                                                className="w-[110px] text-[16px] text-[rgba(255,255,255,0.5)]">Phase:</span><span
+                                                className="text-[16px] text-[#fff] font-[700]">WL</span></div>
+                                            <div className="flex"><span
+                                                className="w-[110px] text-[rgba(255,255,255,0.5)]">Date:</span><span
+                                                className="text-[16px] text-[#fff] font-[700]"><time
+                                                dateTime="1707150600000">2024/02/05 13:30:00</time></span></div>
 
-        <a
-          href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={`mb-3 text-2xl font-semibold`}>
-            Deploy{" "}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className={`m-0 max-w-[30ch] text-sm opacity-50 text-balance`}>
-            Instantly deploy your Next.js site to a shareable URL with Vercel.
-          </p>
-        </a>
-      </div>
-    </main>
-  );
+                                            <div
+                                                className="absolute top-[-8px] right-[-16px] px-[16px] py-[4px] text-[13px] border-end"
+                                            >
+                                                <span className="text-[#fff]">Ended</span></div>
+                                        </div>
+                                    </div>
+                                    <div
+                                        className="px-[16px] py-[8px] text-[#fff] rounded-[4px] bg-[rgba(22,22,22,1)] border-white/30 border-2 "
+                                    >
+                                        <div className="flex flex-col gap-[8px] relative">
+                                            <div className="flex"><span
+                                                className="w-[110px] text-[16px] text-[rgba(255,255,255,0.5)]">Phase:</span><span
+                                                className="text-[16px] text-[#fff] font-[700]">Public</span></div>
+                                            <div className="flex"><span
+                                                className="w-[110px] text-[rgba(255,255,255,0.5)]">Date:</span><span
+                                                className="text-[16px] text-[#fff] font-[700]"><time
+                                                dateTime="1707154200000">2024/02/05 14:30:00</time></span></div>
+                                            <div className="flex"><span
+                                                className="w-[110px] text-[rgba(255,255,255,0.5)]">Price:</span>
+                                                <div className="flex items-center"><span
+                                                    className="text-[16px] text-[#fff] mr-[5px]">0.5</span>
+                                                    <svg width="17" height="15" viewBox="0 0 17 15" fill="current"
+                                                         xmlns="http://www.w3.org/2000/svg" focusable="false"
+                                                         className="fill-white">
+                                                        <path
+                                                            d="M12.4833 8.73993C12.8744 8.0642 13.5057 8.0642 13.8968 8.73993L16.3331 13.0165C16.7242 13.6923 16.4042 14.2436 15.6218 14.2436H10.7139C9.94036 14.2436 9.62028 13.6923 10.0026 13.0165L12.4833 8.73993ZM7.77094 0.506787C8.16214 -0.168929 8.78452 -0.168929 9.17572 0.506787L9.71809 1.48481L10.9984 3.73426C11.3096 4.3744 11.3096 5.13015 10.9984 5.77031L6.70401 13.2121C6.31281 13.8167 5.66376 14.1991 4.94358 14.2436H1.37826C0.59584 14.2436 0.275751 13.7012 0.666969 13.0165L7.77094 0.506787Z"
+                                                            fill="current"></path>
+                                                    </svg>
+                                                </div>
+                                            </div>
+                                            <div className="flex"><span
+                                                className="w-[110px] text-[rgba(255,255,255,0.5)]">Limit:</span><span
+                                                className="text-[16px] text-[#fff] font-[700]">Unlimited</span></div>
+                                            <div className="flex"><span
+                                                className="w-[110px] text-[rgba(255,255,255,0.5)]">Countdown:</span><span
+                                                className="text-[16px] text-[#fff] font-[700]"><span>Mint is open</span></span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div className="flex flex-col w-full xs:w-[400px] gap-[36px]">
+                            <div className="flex w-full justify-center">
+                                <div className="w-[400px] md:w-[400px] h-[400px] md:h-[400px] relative"><Image
+                                    className="absolute top-0 left-0 w-full h-full" src="/logo.png" fill={true}
+                                    alt="Gobblerz"
+                                /><Image className="absolute w-full h-full"
+                                         src="/logo.png" fill={true} alt="Gobblerz"/></div>
+                            </div>
+                            <Mint/>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+    )
+        ;
 }
