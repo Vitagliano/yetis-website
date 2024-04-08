@@ -1,120 +1,150 @@
 import Image from "next/image";
 import {Mint} from "@/components/mint";
 import React from "react";
+import {Button} from "@/components/ui/button";
+import {Accordion, AccordionContent, AccordionItem, AccordionTrigger} from "@/components/ui/accordion";
+import {Faq} from "@/components/faq";
+import Link from "next/link";
 
 export default function Home() {
     return (
-        <main className="flex min-h-screen flex-col items-center w-full relative">
-            <div className="bg-gobblerz-pattern absolute inset-0 -z-1"/>
+        <main className="flex flex-col items-center w-full relative">
+            <header className="w-full h-dvh bg-gradient-to-b from-[#73C4EF] from-0% to-white to-55% relative pixelated">
+                <Image src="/hero/yeti.png" alt="Yeti" fill/>
+                <Image src="/hero/mountain.png" alt="Mountain" fill/>
+                <Image src="/hero/bighand.png" alt="Yeti's Hand" fill/>
+                <Image src="/hero/cave.png" alt="Cave" fill/>
+                <Image src="/hero/top.png" alt="Top" fill/>
+                <Image src="/hero/pinetrees.png" alt="Pinetrees" fill/>
 
+                <Image src="/hero/kings.png" alt="Kings" fill/>
+                <Image src="/hero/gold.png" alt="Gold" fill/>
+                <Image src="/hero/sign.png" alt="Sign" fill/>
+                <Image src="/hero/bottom.png" alt="Bottom" fill/>
 
-            <div className="flex items-center justify-center w-full max-w-6xl min-h-[100vh] relative">
-                <div className="absolute top-0 left-0 w-full h-full opacity-[0.1] z-[-1]"
-                ></div>
-                <div className="flex w-[1300px] min-h-[100vh]">
-                    <div
-                        className="flex flex-col px-[30px] xl:px-0 xl:flex-row w-full items-center xl:items-start xl:items-between gap-[30px] xl:gap-[150px] mt-[20px] xl:mt-[100px] mb-[50px]">
-                        <div className="flex flex-col grow"><span
-                            className="text-[42px] text-[#fff] font-[700]">GOBBLERZ</span>
-                            <div className="flex gap-[10px] mt-[12px]">
-                                <div
-                                    className="px-[16px] py-[8px] text-[#fff] rounded-[4px] bg-[rgba(22,22,22,1)] border-white/30 border-2 "
-                                ><span
-                                    className="text-[rgba(255,255,255,0.5)] font-[600]">Supply:</span> <span>2222</span>
-                                </div>
-                            </div>
-                            <div className="flex flex-col mt-[45px] gap-[12px]"><span
-                                className="text-[22px] text-[#fff] font-[700]">About GOBBLERZ Collection</span><span
-                                className="text-[rgba(255,255,255,0.5)] text-[16px]">The Gobblerz collection resembles an exquisite art gallery showcasing the talent of over 30 accomplished artists on the Avalanche platform. Discover your favorite artists among our collaborative works, featuring a stunning array of unique 1/1 creations!</span>
-                            </div>
-                            <div className="flex flex-col mt-[45px] gap-[12px]"><span
-                                className="text-[22px] text-[#fff] font-[700]">Mint Phases</span>
-                                <div className="flex flex-col w-full gap-[24px]">
-                                    <div
-                                        className="px-[16px] py-[8px] text-[#fff] rounded-[4px] bg-[rgba(22,22,22,1)] border-white/30 border-2 ">
-                                        <div className="flex flex-col gap-[8px] relative">
-                                            <div className="flex"><span
-                                                className="w-[110px] text-[16px] text-[rgba(255,255,255,0.5)]">Phase:</span><span
-                                                className="text-[16px] text-[#fff] font-[700]">OG</span></div>
-                                            <div className="flex"><span
-                                                className="w-[110px] text-[rgba(255,255,255,0.5)]">Date:</span><span
-                                                className="text-[16px] text-[#fff] font-[700]"><time
-                                                dateTime="1707148800000">2024/02/05 13:00:00</time></span></div>
-
-
-                                            <div
-                                                className="absolute top-[-8px] right-[-16px] px-[16px] py-[4px] text-[13px] border-end"
-                                            >
-                                                <span className="text-[#fff]">Ended</span></div>
-                                        </div>
-                                    </div>
-                                    <div className="border-white/30 border-2 p-[16px] py-[8px] text-[#fff] rounded-[4px] bg-[rgba(22,22,22,1)]"
-                                    >
-                                        <div className="flex flex-col gap-[8px] relative">
-                                            <div className="flex"><span
-                                                className="w-[110px] text-[16px] text-[rgba(255,255,255,0.5)]">Phase:</span><span
-                                                className="text-[16px] text-[#fff] font-[700]">WL</span></div>
-                                            <div className="flex"><span
-                                                className="w-[110px] text-[rgba(255,255,255,0.5)]">Date:</span><span
-                                                className="text-[16px] text-[#fff] font-[700]"><time
-                                                dateTime="1707150600000">2024/02/05 13:30:00</time></span></div>
-
-                                            <div
-                                                className="absolute top-[-8px] right-[-16px] px-[16px] py-[4px] text-[13px] border-end"
-                                            >
-                                                <span className="text-[#fff]">Ended</span></div>
-                                        </div>
-                                    </div>
-                                    <div
-                                        className="px-[16px] py-[8px] text-[#fff] rounded-[4px] bg-[rgba(22,22,22,1)] border-white/30 border-2 "
-                                    >
-                                        <div className="flex flex-col gap-[8px] relative">
-                                            <div className="flex"><span
-                                                className="w-[110px] text-[16px] text-[rgba(255,255,255,0.5)]">Phase:</span><span
-                                                className="text-[16px] text-[#fff] font-[700]">Public</span></div>
-                                            <div className="flex"><span
-                                                className="w-[110px] text-[rgba(255,255,255,0.5)]">Date:</span><span
-                                                className="text-[16px] text-[#fff] font-[700]"><time
-                                                dateTime="1707154200000">2024/02/05 14:30:00</time></span></div>
-                                            <div className="flex"><span
-                                                className="w-[110px] text-[rgba(255,255,255,0.5)]">Price:</span>
-                                                <div className="flex items-center"><span
-                                                    className="text-[16px] text-[#fff] mr-[5px]">0.5</span>
-                                                    <svg width="17" height="15" viewBox="0 0 17 15" fill="current"
-                                                         xmlns="http://www.w3.org/2000/svg" focusable="false"
-                                                         className="fill-white">
-                                                        <path
-                                                            d="M12.4833 8.73993C12.8744 8.0642 13.5057 8.0642 13.8968 8.73993L16.3331 13.0165C16.7242 13.6923 16.4042 14.2436 15.6218 14.2436H10.7139C9.94036 14.2436 9.62028 13.6923 10.0026 13.0165L12.4833 8.73993ZM7.77094 0.506787C8.16214 -0.168929 8.78452 -0.168929 9.17572 0.506787L9.71809 1.48481L10.9984 3.73426C11.3096 4.3744 11.3096 5.13015 10.9984 5.77031L6.70401 13.2121C6.31281 13.8167 5.66376 14.1991 4.94358 14.2436H1.37826C0.59584 14.2436 0.275751 13.7012 0.666969 13.0165L7.77094 0.506787Z"
-                                                            fill="current"></path>
-                                                    </svg>
-                                                </div>
-                                            </div>
-                                            <div className="flex"><span
-                                                className="w-[110px] text-[rgba(255,255,255,0.5)]">Limit:</span><span
-                                                className="text-[16px] text-[#fff] font-[700]">Unlimited</span></div>
-                                            <div className="flex"><span
-                                                className="w-[110px] text-[rgba(255,255,255,0.5)]">Countdown:</span><span
-                                                className="text-[16px] text-[#fff] font-[700]"><span>Mint is open</span></span>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div className="flex flex-col w-full xs:w-[400px] gap-[36px]">
-                            <div className="flex w-full justify-center">
-                                <div className="w-[400px] md:w-[400px] h-[400px] md:h-[400px] relative"><Image
-                                    className="absolute top-0 left-0 w-full h-full" src="/logo.png" fill={true}
-                                    alt="Gobblerz"
-                                /><Image className="absolute w-full h-full"
-                                         src="/logo.png" fill={true} alt="Gobblerz"/></div>
-                            </div>
-                            <Mint/>
-                        </div>
+            </header>
+            <section className="max-w-5xl w-full mb-32">
+                <div className="grid grid-cols-2 grid-rows-1 gap-12">
+                    <div className="flex flex-col justify-center">
+                        <h1 className="font-jakarta text-6xl font-bold text-[#73BEEF] mb-6">
+                            Explore, build and conquer
+                        </h1>
+                        <p className="font-roboto mb-4">
+                            From far-distant mountains, the glorious and humongous three Kings came to rescue the snowy
+                            land of Ayveks, bringing with them thousands of Yetis, each to its own uniqueness. Still,
+                            all united to form a new DAO, ruled by three pillars: Farm, Boast, and Pillage.
+                        </p>
+                        <p className="font-roboto">Each pillar will have its own stake in the history and
+                            decision-making in the snowy land.</p>
+                    </div>
+                    <div className="flex justify-end relative aspect-square rounded overflow-hidden">
+                        <Image src="/yetis.png" alt="Yetis" fill className="pixelated"/>
                     </div>
                 </div>
-            </div>
+            </section>
+
+
+            <section className="max-w-5xl w-full mb-32">
+                <div className="grid grid-cols-2 grid-rows-1 gap-12">
+                    <div className="flex relative aspect-square">
+
+                        <div className="grid grid-cols-4 grid-rows-4 gap-2">
+                            <Image src="/yetis/1.png" alt="Yetis" width={240} height={240}
+                                   className="rounded hover:scale-110"/>
+
+                            <Image src="/yetis/2.png" alt="Yetis" width={240}
+                                   height={240} className="rounded hover:scale-110"/>
+
+                            <Image src="/yetis/3.png" alt="Yetis" width={240}
+                                   height={240} className="rounded hover:scale-110"/>
+
+                            <Image src="/yetis/4.png" alt="Yetis" width={240}
+                                   height={240} className="rounded hover:scale-110"/>
+
+                            <Image src="/yetis/5.png" alt="Yetis" width={240}
+                                   height={240} className="rounded hover:scale-110"/>
+
+                            <Image src="/yetis/6.png" alt="Yetis" width={240}
+                                   height={240} className="rounded hover:scale-110"/>
+
+                            <Image src="/yetis/7.png" alt="Yetis" width={240}
+                                   height={240} className="rounded hover:scale-110"/>
+
+                            <Image src="/yetis/8.png" alt="Yetis" width={240}
+                                   height={240} className="rounded hover:scale-110"/>
+
+                            <Image src="/yetis/9.png" alt="Yetis" width={240}
+                                   height={240} className="rounded hover:scale-110"/>
+
+                            <Image src="/yetis/10.png" alt="Yetis" width={240}
+                                   height={240}
+                                   className="rounded hover:scale-110"/>
+                            <Image src="/yetis/11.png" alt="Yetis" width={240}
+                                   height={240}
+                                   className="rounded hover:scale-110"/>
+                            <Image src="/yetis/12.png" alt="Yetis" width={240}
+                                   height={240}
+                                   className="rounded hover:scale-110"/>
+                            <Image src="/yetis/13.png" alt="Yetis" width={240}
+                                   height={240}
+                                   className="rounded hover:scale-110"/>
+                            <Image src="/yetis/14.png" alt="Yetis" width={240}
+                                   height={240}
+                                   className="rounded hover:scale-110"/>
+                            <Image src="/yetis/15.png" alt="Yetis" width={240}
+                                   height={240}
+                                   className="rounded hover:scale-110"/>
+                            <Image src="/yetis/16.png" alt="Yetis" width={240}
+                                   height={240}
+                                   className="rounded hover:scale-110"/>
+                        </div>
+
+                    </div>
+                    <div className="flex flex-col justify-center items-start">
+                        <h1 className="font-jakarta text-6xl font-bold text-[#73BEEF] mb-6">
+                            Know your
+                            people
+                        </h1>
+                        <p className="font-roboto mb-4">
+                            Yetis are a very diverse people, you can find people from all over the icy lands
+                        </p>
+                        <Button>Visit the Gallery</Button>
+                    </div>
+                </div>
+            </section>
+
+            <section className="max-w-5xl w-full mb-32">
+                <h1 className="font-jakarta text-5xl text-center text-[#73BEEF] mb-6">
+                    Frequently asked questions
+                </h1>
+                <Accordion type="single" collapsible>
+                    <Faq/>
+                </Accordion>
+            </section>
+
+            <footer className="max-w-5xl flex justify-between items-center w-full">
+                <div className="font-roboto text-lg">
+                    <p className="mb-2">
+                        All Rights Reserved.
+                    </p>
+                    <p>© Pixel Yeti DAO</p>
+                </div>
+                <Image src="/bases/1.png" alt="Yeti" width={240} height={240}/>
+                <div className="font-roboto text-lg">
+                    <p className="mb-2">
+                        Follow Us
+                    </p>
+                    <div className="flex gap-4 items-center justify-between">
+                        <Link href="https://x.com/yetisavax">
+                            <Image src="/x.svg" alt="X (Twitter)" width={28} height={28}/>
+                        </Link>
+                        <Link href="https://discord.gg/eyuDxmDZAZ">
+                            <Image src="/discord.svg" alt="Discord" width={32} height={32} className="pixelated"/>
+                        </Link>
+                    </div>
+                </div>
+
+            </footer>
         </main>
-    )
-        ;
+    );
 }

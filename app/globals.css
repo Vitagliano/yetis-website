@@ -76,14 +76,8 @@
     }
 }
 
-.bg-gobblerz-pattern {
-    background: url('/bg.png');
-    filter: blur(8px);
-    opacity: 0.1;
-}
-
-.border-end {
-    border-left: 2px solid rgba(255, 255, 255, 0.3);
-    border-bottom: 2px solid rgba(255, 255, 255, 0.3);
-    border-bottom-left-radius: 4px;
+@layer components {
+    .pixelated {
+        image-rendering: pixelated;
+    }
 }
